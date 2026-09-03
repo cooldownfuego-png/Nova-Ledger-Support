@@ -1,0 +1,81 @@
+name: Nova Ledger closed-test feedback
+description: Share optional, public feedback from the Google Play closed test.
+title: "Closed-test feedback: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing Nova Ledger. This report is public. Use only fictional asset names and values. Never include your email address, password, verification code, bank or brokerage information, payment details, real balances, screenshots containing personal information, or another person's data.
+
+  - type: dropdown
+    id: build
+    attributes:
+      label: Tested build
+      description: Check Nova Ledger's app information in Google Play if you are unsure.
+      options:
+        - Build 7 / version 1.0.0
+        - A later build
+        - I could not determine the build
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: journeys
+    attributes:
+      label: Journeys you genuinely tested
+      description: Select only actions you personally completed. No minimum is required.
+      options:
+        - label: First launch or welcome screen
+        - label: Account creation or sign-in
+        - label: Empty portfolio
+        - label: Add a fictional asset
+        - label: Edit and persist a fictional asset after reopening
+        - label: Hide and reveal balances
+        - label: Privacy & Support links
+        - label: Account-deletion warning and Cancel (deletion not submitted)
+        - label: Offline error and recovery
+        - label: Delete fictional data and sign out
+
+  - type: dropdown
+    id: result
+    attributes:
+      label: Overall result
+      options:
+        - Completed the tested journeys without a problem
+        - Completed them with a minor problem
+        - A problem blocked part of the test
+        - The app would not install or open
+    validations:
+      required: true
+
+  - type: textarea
+    id: observation
+    attributes:
+      label: What happened?
+      description: Describe what worked, what was confusing, or what failed. Include concise reproduction steps for a problem.
+      placeholder: I opened..., tapped..., expected..., and observed...
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Optional test environment
+      description: Android version and a general device class are enough. Do not include serial numbers, advertising IDs, account details, or other unique identifiers.
+      placeholder: Android 15, mid-range phone
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Optional improvement
+      description: What one change would make the experience clearer or more useful?
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public-data confirmation
+      options:
+        - label: I used fictional financial data and removed private or identifying information from this public report.
+          required: true
+        - label: This report describes testing I personally performed.
+          required: true
