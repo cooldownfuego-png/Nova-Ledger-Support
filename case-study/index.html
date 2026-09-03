@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A technical case study covering Nova Ledger's Flutter architecture, Supabase security, release controls, and verified mobile delivery evidence.">
+    <meta name="theme-color" content="#07110f">
+    <title>Nova Ledger | Technical Case Study</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+      <div class="shell nav">
+        <a class="brand" href="../" aria-label="Nova Ledger support home"><span class="brand-mark" aria-hidden="true">✦</span>NOVA LEDGER</a>
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="../">Support</a></li>
+            <li><a href="./" aria-current="page">Case study</a></li>
+            <li><a href="../privacy/">Privacy</a></li>
+            <li><a href="../delete-account/">Delete account</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="shell policy">
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">Technical case study</p>
+        <h1 id="page-title">One focused product. Full delivery discipline.</h1>
+        <p class="lede">Nova Ledger is a focused Flutter application for manually tracking personal assets. Its deliberately small product scope made the complete engineering path visible: interface behavior, secure persistence, failure handling, automated validation, signed builds, store delivery, and real-device acceptance.</p>
+      </section>
+
+      <section class="policy-section" aria-labelledby="architecture-title">
+        <h2 id="architecture-title">Architecture</h2>
+        <ol class="architecture" aria-label="Nova Ledger architecture flow">
+          <li><strong>Flutter presentation</strong><span>Authentication, portfolio, and privacy-support screens</span></li>
+          <li><strong>Domain contracts</strong><span>Authentication and asset repository interfaces</span></li>
+          <li><strong>Supabase adapters</strong><span>Authentication plus Postgres persistence</span></li>
+          <li><strong>Database boundary</strong><span>Row Level Security restricts every asset to its owner</span></li>
+          <li><strong>Release controls</strong><span>Format, analysis, 73 tests, coverage, secret checks, and signed artifacts</span></li>
+          <li><strong>Delivery evidence</strong><span>Google Play, TestFlight, Android acceptance, and iPhone acceptance</span></li>
+        </ol>
+      </section>
+
+      <section class="policy-section" aria-labelledby="scope-title">
+        <h2 id="scope-title">What users can do</h2>
+        <ul>
+          <li>Create an account and confirm its email address.</li>
+          <li>Sign in to an owner-specific portfolio.</li>
+          <li>Add, edit, persist, and delete manually entered assets.</li>
+          <li>Hide every visible balance without altering stored values.</li>
+          <li>Reach privacy, support, and deletion information before or after sign-in.</li>
+          <li>Request account deletion through a documented operational process.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section" aria-labelledby="security-title">
+        <h2 id="security-title">Data-protection model</h2>
+        <ul>
+          <li>Supabase Auth establishes the user session.</li>
+          <li>Postgres Row Level Security restricts select, insert, update, and delete operations to the authenticated owner.</li>
+          <li>Client code receives only public configuration; administrative credentials never ship in the app.</li>
+          <li>Secret scanning rejects protected paths and high-confidence credential formats.</li>
+          <li>Public policy, support, and deletion routes are checked against exact approved markers.</li>
+          <li>Reviewer and closed-test evidence stays private and de-identified.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section" aria-labelledby="quality-title">
+        <h2 id="quality-title">Quality evidence</h2>
+        <div class="grid evidence-grid">
+          <article class="card"><h3>73 tests</h3><p>Authentication, portfolio behavior, persistence, failure handling, privacy navigation, deletion, and evidence integrity.</p></article>
+          <article class="card"><h3>78.3% coverage</h3><p>445 of 568 tested lines against a fail-closed 75% minimum.</p></article>
+          <article class="card"><h3>Two physical devices</h3><p>Store-delivered Build 7 passed Android and iPhone acceptance.</p></article>
+        </div>
+        <p>Release verification also checks formatting, static analysis, store assets, release identity, artifact provenance, checksums, signing evidence, reviewer access, screenshot provenance, and account-deletion operations.</p>
+      </section>
+
+      <section class="policy-section" aria-labelledby="delivery-title">
+        <h2 id="delivery-title">Release journey</h2>
+        <ul>
+          <li>Build 7 is active on Google Play's closed Alpha track.</li>
+          <li>Google Play independently accepted the at-least-12-testers threshold; the required 14-day continuity window is in progress.</li>
+          <li>Build 7 passed the Play-installed Moto G release gate.</li>
+          <li>Apple validated Build 7 in TestFlight, and it passed an eleven-check iPhone acceptance pass.</li>
+          <li>Apple Build 7 is submitted for App Review with manual public release retained.</li>
+        </ul>
+      </section>
+
+      <section class="policy-section" aria-labelledby="decisions-title">
+        <h2 id="decisions-title">Engineering decisions</h2>
+        <ul>
+          <li><strong>Repository interfaces:</strong> presentation code can be tested without coupling widgets to Supabase.</li>
+          <li><strong>Database-enforced ownership:</strong> authorization remains effective even if a client path is wrong.</li>
+          <li><strong>Explicit failure states:</strong> rejected sign-in, network failure, and failed mutations keep predictable UI and preserve known data.</li>
+          <li><strong>Artifact identity:</strong> version, source revision, signature, checksum, and physical result must describe the same candidate.</li>
+          <li><strong>Evidence contracts:</strong> release claims fail when required proof is missing, stale, inconsistent, or includes unresolved blockers.</li>
+        </ul>
+      </section>
+
+      <aside class="callout" aria-labelledby="boundary-title">
+        <h2 id="boundary-title">Honest boundary</h2>
+        <p>Nova Ledger is not a bank, brokerage, payment platform, or demonstration of enterprise scale. It demonstrates end-to-end ownership of a carefully scoped financial-data application and the discipline to protect users, test failure paths, preserve release identity, and communicate only what the evidence proves.</p>
+      </aside>
+    </main>
+    <footer>
+      <div class="shell">
+        <p>© 2026 Brian Kendall Software</p>
+        <p>Nova Ledger is a manual asset tracker, not a bank or financial adviser.</p>
+      </div>
+    </footer>
+  </body>
+</html>

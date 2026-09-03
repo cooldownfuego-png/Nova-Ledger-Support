@@ -179,6 +179,31 @@ h3 {
   padding: 1.5rem;
 }
 
+.architecture {
+  display: grid;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.architecture li {
+  background: rgba(49, 230, 161, 0.06);
+  border-left: 0.25rem solid var(--emerald);
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.85rem 1rem;
+}
+
+.architecture span {
+  color: var(--muted);
+}
+
+.evidence-grid {
+  margin: 1rem 0 1.5rem;
+}
+
 .card p,
 .muted {
   color: var(--muted);
