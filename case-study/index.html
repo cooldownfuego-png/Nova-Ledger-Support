@@ -28,7 +28,7 @@
         <p class="eyebrow">Technical case study</p>
         <h1 id="page-title">One focused product. Full delivery discipline.</h1>
         <p><a class="button" href="https://apps.apple.com/us/app/nova-ledger-asset-tracker/id6807204743">Try Nova Ledger on the App Store</a></p>
-        <p>Published for iPhone and iPad. Google Play production access was requested September 19, 2026; approval is pending and Android is not yet publicly released.</p>
+        <p>Published for iPhone and iPad. Google Play requested more closed testing after the initial production-access review; Android is not yet publicly released.</p>
         <p class="lede">Nova Ledger is a focused Flutter application for manually tracking personal assets. Brian directed its substantially AI-assisted development and personally tested its critical journeys on physical Android and iPhone devices. Its deliberately small product scope made the complete delivery path visible: interface behavior, secure persistence, failure handling, automated validation, signed builds, store delivery, and real-device acceptance.</p>
       </section>
 
@@ -39,7 +39,7 @@
           <li><strong>Domain contracts</strong><span>Authentication and asset repository interfaces</span></li>
           <li><strong>Supabase adapters</strong><span>Authentication plus Postgres persistence</span></li>
           <li><strong>Database boundary</strong><span>Row Level Security restricts every asset to its owner</span></li>
-          <li><strong>Release controls</strong><span>Format, analysis, 77 tests, coverage, secret checks, and signed artifacts</span></li>
+          <li><strong>Release controls</strong><span>Format, analysis, automated tests, coverage, secret checks, and signed artifacts</span></li>
           <li><strong>Delivery evidence</strong><span>Google Play, TestFlight, Android acceptance, and iPhone acceptance</span></li>
         </ol>
       </section>
@@ -83,12 +83,17 @@
         <h2 id="delivery-title">Release journey</h2>
         <ul>
           <li>Build 7 is active on Google Play's closed Alpha track.</li>
-          <li>Google Play enabled the production-access application after closed testing. The request was submitted September 19, 2026, and the dashboard confirmed receipt; production access remains under review.</li>
+          <li>Google Play reviewed the September 19 production-access request and responded September 21 that more testing was required. It instructed an additional 14 days of closed testing with real testers before applying again. Its response cited low engagement and limited feedback-driven improvement as possible reasons for denial.</li>
           <li>Build 7 passed the Play-installed Moto G release gate.</li>
           <li>Apple validated Build 7 in TestFlight, and that build passed an eleven-check iPhone acceptance pass.</li>
           <li>After correcting placeholder artwork, Build 8 replaced Build 7 in the September 8 submission; the earlier physical-device evidence is not presented as Build 8 testing.</li>
           <li>On September 11, 2026, version 1.0 (Build 8) was released on the Apple App Store. <a href="https://apps.apple.com/us/app/nova-ledger-asset-tracker/id6807204743">View Nova Ledger on the App Store</a>. Android remains in closed testing; iOS publication does not establish Android production approval.</li>
         </ul>
+      </section>
+
+      <section class="policy-section" aria-labelledby="candidate-title">
+        <h2 id="candidate-title">Next-release work, not yet shipped</h2>
+        <p>The current draft source improves asset-entry validation, tracked-value wording, refresh and load-error states, and readability of large saved values on narrow screens. On September 24, 140 Flutter tests passed locally and the latest draft commit passed the GitHub quality check. This does not mean the App Store build changed, a new Google Play bundle was delivered, or authenticated post-restoration Android behavior passed on a physical phone. Those are separate release gates.</p>
       </section>
 
       <section class="policy-section" aria-labelledby="decisions-title">
