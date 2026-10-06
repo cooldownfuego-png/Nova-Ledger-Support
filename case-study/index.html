@@ -94,6 +94,8 @@
       <section class="policy-section" aria-labelledby="candidate-title">
         <h2 id="candidate-title">Next-release work, not yet shipped</h2>
         <p>The current draft source improves asset-entry validation, tracked-value wording, refresh and load-error states, and readability of large saved values on narrow screens. On September 24, 140 Flutter tests passed locally and the app-fix commit passed the GitHub quality check. This does not mean the App Store build changed, a new Google Play bundle was delivered, or authenticated post-restoration Android behavior passed on a physical phone. Those are separate release gates.</p>
+        <p><strong>October 5 local checkpoint:</strong> the current Flutter suite passed all 335 tests. New mutation-timeout checks cover writes that may finish after the screen reports a timeout, late failures, and safe reconciliation without blindly repeating a write. These are local automated results, not a new coverage measurement or proof of the shipped app's behavior.</p>
+        <p>One specific regression keeps the portfolio open while a delete times out and is later rejected: the original asset stays visible and no unhandled widget error occurs. Codex implemented the regression and ran the automated checks. Brian's role remains product direction and hands-on testing; the next Android candidate still needs its own authenticated physical-device acceptance before release.</p>
       </section>
 
       <section class="policy-section" aria-labelledby="decisions-title">
